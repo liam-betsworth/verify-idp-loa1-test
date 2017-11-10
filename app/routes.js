@@ -7,10 +7,10 @@ var marked = require("marked");
 var queryString = require("query-string");
 var dbURL = 'http://govuk-verify-db.herokuapp.com/prototypes/stable';
 
-var NotifyClient = require('notifications-node-client').NotifyClient;
+// var NotifyClient = require('notifications-node-client').NotifyClient;
 
-console.log(process.env.NOTIFYAPIKEY);
-notifyClient = new NotifyClient(process.env.NOTIFYAPIKEY);
+// console.log(process.env.NOTIFYAPIKEY);
+// notifyClient = new NotifyClient(process.env.NOTIFYAPIKEY);
 
 console.log("Verify root: " + verifyRoot);
 
@@ -201,7 +201,7 @@ module.exports = {
 
       // } else {
 
-      notifyClient.sendSms("5c179906-df50-44c9-b42e-f71de4c26b50", req.body.mobileNumber);
+      // notifyClient.sendSms("5c179906-df50-44c9-b42e-f71de4c26b50", req.body.mobileNumber);
       res.redirect('/' + req.params.idp + '/security-code-2?' + queryString.stringify(req.body));
     // }
 
