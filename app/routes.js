@@ -1,7 +1,7 @@
 var dir = require('node-dir');
 var idps = require(__dirname+"/lib/idps.json");
 var userInfo = require(__dirname+"/lib/user.json");
-var verifyRoot = process.env.VERIFY_ROOT || "http://localhost:3000";
+var verifyRoot = process.env.VERIFY_ROOT || "http://localhost:3000"; 
 var request = require("request");
 var marked = require("marked");
 var queryString = require("query-string");
