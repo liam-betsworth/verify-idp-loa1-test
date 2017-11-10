@@ -77,10 +77,10 @@ module.exports = {
         var service = getService(requestId);
 
 
-        if (!service){
-          res.status(404).send("Service not found");
-          return;
-        }
+        // if (!service){
+        //   res.status(404).send("Service not found");
+        //   return;
+        // }
 
         res.locals.formData = "";
         res.locals.formQuery = "?";
@@ -97,13 +97,13 @@ module.exports = {
 
         res.locals.requestId = requestId;
         res.locals.request = request;
-        res.locals.serviceName = service.name;
-        res.locals.serviceLOA = service.LOA;
-        res.locals.serviceAcceptsLOA1 = (service.LOA == "2,1");
-        res.locals.userLOAis2 = (req.query.userLOA == "2");
-        res.locals.serviceNameLower = service.name[0].toLowerCase() + service.name.substring(1);
-        res.locals.serviceProvider = service.provider;
-        res.locals.serviceOtherWays = (service.otherWays) ? marked(service.otherWays) : "";
+        res.locals.serviceName = "service name";
+        res.locals.serviceLOA = 1;
+        res.locals.serviceAcceptsLOA1 = true;
+        res.locals.userLOAis2 = true;
+        res.locals.serviceNameLower = "service name";
+        res.locals.serviceProvider = "service provider";
+        res.locals.serviceOtherWays = "Other ways";
 
         if (req.query.idp){
           res.locals.idpSlug = req.query.idp;
